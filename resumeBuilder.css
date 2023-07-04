@@ -1,0 +1,105 @@
+/* header styles start */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+*{
+margin: 0;
+padding: 0;
+background-color: silver;
+box-sizing: border-box;
+text-decoration: none;
+}
+
+.logo{
+    padding:8px;
+    color: #006b66;
+    font-size: 50px;
+    font-family: 'satisfy';
+    font-weight: 500;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+    padding: 0 80px;
+    box-shadow: 3px 3px 10px lightslategray;
+}
+
+.nav-bar li{
+    display: flex;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #0f9690;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover {
+    color: #006863;
+    text-decoration: underline;
+}
+
+/* header styler ends */
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #0f9690;
+    border-radius: 5px;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0f9690;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #preview {
+    display:none;
+  }
+  
+  #previewContent {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
