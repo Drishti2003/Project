@@ -28,4 +28,14 @@ document.getElementById('resumeForm').addEventListener('submit', function(e) {
   
     document.getElementById('preview').style.display = 'block';
   }
-  
+
+function download() {
+  debugger
+  var element = document.getElementById('previewContent');
+  // define optional configuration
+  var options = { filename: 'my-file.pdf'};
+
+  var exporter = new html2pdf(element, options);
+  // download the pdf
+  exporter.getPdf(true).then((pdf) => { console.log('pdf downloaded!', pdf); });
+}
