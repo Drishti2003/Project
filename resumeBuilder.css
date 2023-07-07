@@ -3,7 +3,6 @@
 *{
 margin: 0;
 padding: 0;
-background-color:snow;
 box-sizing: border-box;
 text-decoration: none;
 }
@@ -51,16 +50,38 @@ header{
     text-decoration: underline;
 }
 
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: 100%;
+  background-color: snow;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  background-color: #006863;
+  color: snow;
+  display: block;
+}
+
 /* header styler ends */
+
+/* slider section start*/
 .slider-section {
   padding: 2rem;
+  float: left;
+  margin-top: 20px;
 }
 
 .slider-wrapper {
   position: relative;
-  max-width: 35rem;
+  max-width: 30rem;
   margin: 0 auto;
-  margin-left: 80px;
+  margin-right: 18px;
 }
 
 .slider {
@@ -93,7 +114,7 @@ header{
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #006863;
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
@@ -102,6 +123,50 @@ header{
   opacity: 1;
 }
 
+/* slider section ends*/
+
+
+/* content section start*/
+
+.content {
+  margin-top: 70px;
+  margin-right: 5px;
+  margin-bottom: 200px;
+}
+
+.content-intro {
+  padding-bottom:60px;
+  color: #002422;
+  font-size: 30px;
+}
+
+.intro-content {
+  font-weight: 400px;
+  font-size: 75px;
+  margin-top: 160px;
+  font-style: bold;
+  margin-right: 6px;
+}
+
+.createresume input {
+  display: block;
+  width: 20%;
+  padding: 20px;
+  background-color: #006b66;;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  margin-left: 800px;
+} 
+
+.createresume input:hover {
+  background-color: #0f9690;
+}
+
+/* content section ends*/
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -134,7 +199,7 @@ header{
     margin-bottom: 10px;
   }
   
-  button {
+.generate {
     display: block;
     width: 100%;
     padding: 10px;
@@ -171,3 +236,173 @@ header{
     border-radius: 5px;
   }
   
+  .about{
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 10px 0; */
+}
+
+.about-us{
+  margin-top: 3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-div {
+  flex-basis: 31%;
+  /* background: silver; */
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 0px 3px 3px #000;
+}
+
+.about-div:hover {
+  box-shadow: 0px 8px 30px;
+}
+
+.about-heading-features{
+  color: #002422;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+ /* accordian css starts */
+
+ .ResuDesc{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 26px;
+ }
+
+ .container1 {
+  margin: 15px;
+  margin-bottom: 30px;
+}
+input[type="radio"] {
+  display: none;
+}
+.container1 {
+  border: 1px solid #002422;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #002422;
+  color: white;
+  background: #006863;
+  z-index: 2; /* put it above the accordion content */
+}
+
+
+label:hover {
+  background: #0f9690;
+}
+
+.accordion:last-child > label, .accordion:last-child > .accordion-content {
+  border: none;
+}
+.accordion-content {
+  border-bottom: 1px solid #002422;
+  padding: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: 0.3s linear;
+  font-weight: 300px;
+  background-color: #f0fafa;
+}
+input:checked ~ .accordion-content {
+  padding: 15px;
+  opacity: 1;
+  max-height: 500px;
+  z-index:1;
+}
+
+/* accordian css ends */
+
+
+
+ /* footer section css */
+
+ footer {
+  background-color: #002422;
+  /*position: relative;  required to position the copyright at the bottom */
+}
+
+.footercontainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+  background-color: #002422;
+}
+
+.footer-copyright {
+  width: 100%;
+  height: 40px;
+  background: #002422;
+  /* positions the copyright at the bottom of the footer */
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  left: 0px;
+  color: white;
+  position: relative;
+}
+
+.social-icon {
+  background-color: #002422;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.social-icon a i {
+  font-size: 2em;
+  color: #002422;
+  opacity: 0.9;
+}
+
+.social-icon a:hover {
+  background-color: #002422;
+  transition: 0.5s;
+}
+
+.social-icon a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+/* designing preview form section style */
+#form-style{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 500px;
+text-decoration: underline;
+padding: 5px;
+}
+.styles-form{
+font-size: normal;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: 300px;
+padding: 10px;
+} 
