@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="resumeBuilder.css">
+    <script src="https://unpkg.com/js-html2pdf@latest/lib/html2pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <hr width="100%" color="#0f9690" style="margin: 5px;">
+        <form id="resumeForm">
+          <div class="section">
+            <h2>Personal Information</h2>
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <!-- add more info fields according to need -->
+          </div>
+    
+          <div class="section">
+            <h2>Education</h2>
+            <input type="text" name="educationTitle" placeholder="Degree" required>
+            <input type="text" name="educationInstitution" placeholder="Institution" required>
+            <input type="date" name="educationDate" placeholder="Date" required>
+                <!-- add more education fields -->
+              </div>
+        
+              <div class="section">
+                <h2>Work Experience</h2>
+                <input type="text" name="workTitle" placeholder="Job Title" required>
+                <input type="text" name="workCompany" placeholder="Company" required>
+                <input type="date" name="workDate" placeholder="Date" required>
+                <textarea name="workDescription" placeholder="Job Description" required></textarea>
+                <!-- Add more work experience fields -->
+              </div>
+        
+              <div class="section">
+                <h2>Skills</h2>
+                <input type="text" name="skill" placeholder="Skill" required>
+                <!-- Add more skill fields as needed -->
+              </div>
+        
+              <button class="generate" type="submit">Generate Resume</button>
+    
+        </form>
+    
+            <!-- for previewing the resume part start -->
+            <div id="preview" class="section">
+              <button class="button"  onClick="download()">Download PDF</button>
+              <h2>Preview</h2>
+              <div id="previewContent">
+                
+              </div>
+            </div>
+          </div><br><br>
+            <!--for previewing the resume part  end-->
+            
+          <!-- connect html file to javascript file-->
+   <script src="resumeBuilder.js"></script>
+
+</body>
+</html>
