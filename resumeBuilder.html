@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Web Application</title>
     <link rel="stylesheet" href="resumeBuilder.css">
-    <script src="https://unpkg.com/js-html2pdf@latest/lib/html2pdf.min.js"></script>
     <script src="resumeBuilder.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,7 +19,11 @@
             <ul>
                 <li class="line"><a href="SignUpForm.html">Sign Up</a></li>
                 <li class="line"><a>Log In</a></li>
-                <li class="line"><a>About Us</a></li>
+                <li class="line"><a>Contact Us</a>
+                <ul class="dropdown">
+                  <li><a href="https://wa.me/+916376357099?text=">Kunal</a></li>
+                  <li><a href="https://wa.me/+916376458180?text=">Drishti</a></li>
+                </ul></li>
             </ul>
         </nav>
     </header>
@@ -44,164 +48,125 @@
         </div>
       </div>
     </section>
-<!-- header part finish -->
 
-<div class="container">
-    <h1>Resume Builder</h1>
-    <hr width="100%" color="#0f9690" style="margin: 5px;">
-    <form id="resumeForm">
-      <div class="section">
-        <h2>Personal Information</h2>
-        <input type="text" name="fullName" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone" required>
-        <input type="text" name="address" placeholder="Address" required>
-        <!-- add more info fields according to need -->
+    <section class="content">
+      <div class="intro">
+        <p class="intro-content">Unlock Your Potential: Build Your Winning Resume with Ease.</p>
+
+        <p class="content-intro">Experience a seamless and tailored resume creation process with our user-friendly web application.</p>
+
       </div>
-
-      <div class="section">
-        <h2>Education</h2>
-        <input type="text" name="educationTitle" placeholder="Degree" required>
-        <input type="text" name="educationInstitution" placeholder="Institution" required>
-        <input type="date" name="educationDate" placeholder="Date" required>
-            <!-- add more education fields -->
-          </div>
-    
-          <div class="section">
-            <h2>Work Experience</h2>
-            <input type="text" name="workTitle" placeholder="Job Title" required>
-            <input type="text" name="workCompany" placeholder="Company" required>
-            <input type="date" name="workDate" placeholder="Date" required>
-            <textarea name="workDescription" placeholder="Job Description" required></textarea>
-            <!-- Add more work experience fields -->
-          </div>
-    
-          <div class="section">
-            <h2>Skills</h2>
-            <input type="text" name="skill" placeholder="Skill" required>
-            <!-- Add more skill fields as needed -->
-          </div>
-    
-          <button type="submit">Generate Resume</button>
-
-    </form>
-
-        <!-- for previewing the resume part start -->
-        <div id="preview" class="section">
-          <button class="button"  onClick="download()">Download PDF</button>
-          <h2>Preview</h2>
-          <div id="previewContent">
-            
-          </div>
-        </div>
-      </div>
-        <!--for previewing the resume part  end-->
-    
-      <!-- connect html file to javascript file-->
-    <script src="resumeBuilder.js"></script>
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Web Application</title>
-    <link rel="stylesheet" href="resumeBuilder.css">
-    <script src="https://unpkg.com/js-html2pdf@latest/lib/html2pdf.min.js"></script>
-    <script src="resumeBuilder.js"></script>  
-</head>
-
-<body>
-
-    <!-- HEADER OF RESUME WEBSITE -->
-    <header>
-        <div class="logo">Resume Builder</div>
-        <nav class="nav-bar">
-            <ul>
-                <li class="line"><a href="SignUpForm.html">Sign Up</a></li>
-                <li class="line"><a>Log In</a></li>
-                <li class="line"><a>About Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="slider-section">
-      <div class="slider-wrapper">
-        <div class="slider">
-          <img id="slide-1" src="resume1.jpeg" alt="Resume">
-          <img id="slide-2" src="resume2.webp" alt="Resume">
-          <img id="slide-3" src="resume3.webp" alt="Resume">
-          <img id="slide-4" src="resume4.webp" alt="Resume">
-          <img id="slide-5" src="resume5.jpeg" alt="Resume">
-          <img id="slide-6" src="resume6.webp" alt="Resume">
-        </div>
-        <div class="slider-nav">
-          <a href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
-          <a href="#slide-4"></a>
-          <a href="#slide-5"></a>
-          <a href="#slide-6"></a>
-        </div>
+      <div class="createresume">
+        <a href="builder.html">
+        <input type="submit" value="Create My Resume!"></a>
       </div>
     </section>
 <!-- header part finish -->
 
-<div class="container">
-    <h1>Resume Builder</h1>
-    <hr width="100%" color="#0f9690" style="margin: 5px;">
-    <form id="resumeForm">
-      <div class="section">
-        <h2>Personal Information</h2>
-        <input type="text" name="fullName" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone" required>
-        <input type="text" name="address" placeholder="Address" required>
-        <!-- add more info fields according to need -->
+ <!-- features portion start -->
+ <h3 class="about">Features that help you to achieve<br>Your dream job</h3>
+ <div class="about-us">
+   <div class="about-div">
+     <h3 class="about-heading-features">Easy Resume Builder</h3><br>   
+ Easy online resume builder
+ Create an awesome resume in minutes, without leaving your web browser.
+   </div>
+   <div class="about-div">
+     <h3  class="about-heading-features">Optimized Resume</h3><br>
+     Formats and designs are optimized for resume-filtering algorithms. Ensure humans see your application!  
+   </div>
+   <div class="about-div">
+     <h3  class="about-heading-features">Multi Format Resume Options</h3><br>
+     Save your perfect resume in any common format, including Microsoft Word and PDF in a single click.
+   </div>
+ </div>
+ <!-- features portion complete -->
+ 
+ <!-- accordian  code start -->
+ <h2 class="ResuDesc"><u>How to create Effective resume ?</u></h2>
+ <div class="container1">
+    
+   <div class="accordion">
+      <input type="radio" name="accordion" id="accordion1" checked>
+      <label for="accordion1" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is Resume??</label>
+      <div class="accordion-content">
+       A perfect resume is a document that summarizes your professional qualifications as they relate to obtaining a job.
+        Resumes are formal instruments that quickly highlight your skills, education, notable accomplishments and relevant work experience. 
+        Resume writing doesn’t have to be hard if you have the right tools and the best resume formats at your fingertips.While your ultimate goal 
+        with a resume is to get a job, the first purpose it serves is to attract enough attention to get you an interview. Recruiters may go through 
+        hundreds of resumes and only pick a few to interview. A well-written and well-formatted resume gets your
+         foot in the door so you can wow them with your communication and personal interview skills.
       </div>
-
-      <div class="section">
-        <h2>Education</h2>
-        <input type="text" name="educationTitle" placeholder="Degree" required>
-        <input type="text" name="educationInstitution" placeholder="Institution" required>
-        <input type="date" name="educationDate" placeholder="Date" required>
-            <!-- add more education fields -->
-          </div>
-    
-          <div class="section">
-            <h2>Work Experience</h2>
-            <input type="text" name="workTitle" placeholder="Job Title" required>
-            <input type="text" name="workCompany" placeholder="Company" required>
-            <input type="date" name="workDate" placeholder="Date" required>
-            <textarea name="workDescription" placeholder="Job Description" required></textarea>
-            <!-- Add more work experience fields -->
-          </div>
-    
-          <div class="section">
-            <h2>Skills</h2>
-            <input type="text" name="skill" placeholder="Skill" required>
-            <!-- Add more skill fields as needed -->
-          </div>
-    
-          <button type="submit">Generate Resume</button>
-
-    </form>
-
-        <!-- for previewing the resume part start -->
-        <div id="preview" class="section">
-          <button class="button"  onClick="download()">Download PDF</button>
-          <h2>Preview</h2>
-          <div id="previewContent">
-            
-          </div>
-        </div>
+   </div>
+   
+   <div class="accordion">
+      <input type="radio" name="accordion" id="accordion2">
+      <label for="accordion2" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is the Importance Of  a Good Resume??</label>
+      <div class="accordion-content">
+       A resume can help you land your dream job if it’s written correctly. If you outline your relevant experience and skills,
+        display what unique benefits you offer to the company and match yourself to the position, you grab the employer’s attention.
+        Focus on what makes you different than other candidates and what you offer that no one else can.A resume can help you land your
+         dream job if it’s written correctly. If you outline your relevant experience and skills, display what unique benefits you offer to the 
+         company and match yourself to the position, you grab the employer’s attention. 
+        Focus on what makes you different than other candidates and what you offer that no one else can.
       </div>
-        <!--for previewing the resume part  end-->
-    
-      <!-- connect html file to javascript file-->
-    <script src="resumeBuilder.js"></script>
+   </div>
+   
+   <div class="accordion">
+      <input type="radio" name="accordion" id="accordion3">
+      <label for="accordion3" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to Format and Structure of your Resume??</label>
+      <div class="accordion-content">
+       The format and structure of a professional resume is important.<br>
+       Here are some formatting tips when it comes to writing a resume:<br>
+      1. Margins should be at one inch<br>
+      2. Use clear headers for every section<br>
+      3. Use bullet points whenever possible for conciseness<br>
+      4. Try to keep your resume to one page<br>
+      </div>
+   </div>
+   
+   <div class="accordion">
+      <input type="radio" name="accordion" id="accordion4">
+      <label for="accordion4" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to tailor your Resume for your dream job??</label>
+      <div class="accordion-content">
+       Every time you write a resume for a new job, you should tailor it to that job to stay ahead of other job applicants. <br>
+       Use the following steps to tailor your resume:<br>
+      1. Read through the job description for keywords and qualifications<br>
+      2. Always update your summary and objectives when you apply for a new job.<br>
+      3. Put keywords from the job description in your work history bullet points.<br>
+      4. Use quantifiable examples as you highlight your skills.<br>
+      5. Update your skills section each time you apply for a new job, as the hard and soft skills relevant to each job are different. <br>
+      </div>
+   </div>
+ </div>
+ 
+ <!-- accordian code end -->
+     
+ 
+   <!-- connect html file to javascript file-->
+   <script src="resumeBuilder.js"></script>
+ 
+   <!-- Footer Section of WebPage -->
+   <footer>
+     <br><br>
+     <div class="footercontainer">
+     <!-- <div class="social-icon">
+      <a href="https://www.instagram.com/drishti_kirodiwal/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/drishti-kirodiwal-7536a3226"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Drishti2003"><i class="fa-brands fa-github"></i></a> -->
+     </div>
+     <div class="social-icon">
+      <a href="mailto:s.sainibabli@gmail.com?"><i class="fa fa-envelope"></i></a>
+      <a href="https://instagram.com/banna_kunnu?igshid=OTk0YzhjMDVlZA=="><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/kunal-singh-8855b2232"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/ks6024108"><i class="fa-brands fa-github"></i></a>
+     </div>
+     <div class="footer-copyright">
+       Copyright©2023KunnuDrishu.com
+     </div>
+    </div>
+   </footer>
+
 </body>
 
 </html>
