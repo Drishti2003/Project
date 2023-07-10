@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Web Application</title>
+    <title>Resume Builder Web Application</title>
     <link rel="stylesheet" href="resumeBuilder.css">
     <script src="resumeBuilder.js"></script>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <!-- HEADER OF RESUME WEBSITE -->
-    <header>
+    <header id="blur">
         <div class="logo">Resume Builder</div>
         <nav class="nav-bar">
             <ul>
                 <li class="line"><a href="SignUpForm.html">Sign Up</a></li>
-                <li class="line"><a>Log In</a></li>
+                <li class="line"><a href="#features">Features</a></li>
                 <li class="line"><a>Contact Us</a>
                 <ul class="dropdown">
                   <li><a href="https://wa.me/+916376357099?text=">Kunal</a></li>
@@ -27,9 +26,9 @@
             </ul>
         </nav>
     </header>
-
-    <section class="slider-section">
-      <div class="slider-wrapper">
+    
+    <section class="slider-section" >
+      <div class="slider-wrapper" id="blur">
         <div class="slider">
           <img id="slide-1" src="resume1.jpeg" alt="Resume">
           <img id="slide-2" src="resume2.webp" alt="Resume">
@@ -58,13 +57,15 @@
       </div>
       <div class="createresume">
         <a href="builder.html">
-        <input type="submit" value="Create My Resume!"></a>
-      </div>
+        <input type="submit" value="Create My Resume !"></a>
+      <!-- watch video button -->
+      <a href="https://youtu.be/BdQniERyw8I"><input type="submit" value="Watch Video"></a>
+       </div>
     </section>
 <!-- header part finish -->
 
  <!-- features portion start -->
- <h3 class="about">Features that help you to achieve<br>Your dream job</h3>
+ <h3 class="about" id="features">Features that help you to achieve<br>Your dream job</h3>
  <div class="about-us">
    <div class="about-div">
      <h3 class="about-heading-features">Easy Resume Builder</h3><br>   
@@ -88,7 +89,7 @@
     
    <div class="accordion">
       <input type="radio" name="accordion" id="accordion1" checked>
-      <label for="accordion1" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is Resume??</label>
+      <label for="accordion1" style="text-align: center; font-size: 22px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is Resume??</label>
       <div class="accordion-content">
        A perfect resume is a document that summarizes your professional qualifications as they relate to obtaining a job.
         Resumes are formal instruments that quickly highlight your skills, education, notable accomplishments and relevant work experience. 
@@ -101,7 +102,7 @@
    
    <div class="accordion">
       <input type="radio" name="accordion" id="accordion2">
-      <label for="accordion2" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is the Importance Of  a Good Resume??</label>
+      <label for="accordion2" style="text-align: center; font-size: 22px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;"> What is the Importance Of  a Good Resume??</label>
       <div class="accordion-content">
        A resume can help you land your dream job if it’s written correctly. If you outline your relevant experience and skills,
         display what unique benefits you offer to the company and match yourself to the position, you grab the employer’s attention.
@@ -114,7 +115,7 @@
    
    <div class="accordion">
       <input type="radio" name="accordion" id="accordion3">
-      <label for="accordion3" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to Format and Structure of your Resume??</label>
+      <label for="accordion3" style="text-align: center; font-size: 22px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to Format and Structure of your Resume??</label>
       <div class="accordion-content">
        The format and structure of a professional resume is important.<br>
        Here are some formatting tips when it comes to writing a resume:<br>
@@ -127,7 +128,7 @@
    
    <div class="accordion">
       <input type="radio" name="accordion" id="accordion4">
-      <label for="accordion4" style="text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to tailor your Resume for your dream job??</label>
+      <label for="accordion4" style="text-align: center; font-size: 22px; font-family: Arial, Helvetica, sans-serif; font-weight: 200;">How to tailor your Resume for your dream job??</label>
       <div class="accordion-content">
        Every time you write a resume for a new job, you should tailor it to that job to stay ahead of other job applicants. <br>
        Use the following steps to tailor your resume:<br>
@@ -150,23 +151,23 @@
    <footer>
      <br><br>
      <div class="footercontainer">
+      <p style="color: white; margin:5px; text-align:center; font-size:20px">Connect with us on Social Media<br><br></p>
      <!-- <div class="social-icon">
       <a href="https://www.instagram.com/drishti_kirodiwal/"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/drishti-kirodiwal-7536a3226"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/Drishti2003"><i class="fa-brands fa-github"></i></a> -->
-     </div>
      <div class="social-icon">
       <a href="mailto:s.sainibabli@gmail.com?"><i class="fa fa-envelope"></i></a>
       <a href="https://instagram.com/banna_kunnu?igshid=OTk0YzhjMDVlZA=="><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/kunal-singh-8855b2232"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/ks6024108"><i class="fa-brands fa-github"></i></a>
      </div>
+     </div>
      <div class="footer-copyright">
        Copyright©2023KunnuDrishu.com
      </div>
     </div>
    </footer>
-
 </body>
 
 </html>
