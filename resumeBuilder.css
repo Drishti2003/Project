@@ -7,6 +7,12 @@ box-sizing: border-box;
 text-decoration: none;
 }
 
+#blur.active {
+  filter:blur(20px);
+  pointer-events:none;
+  user-select:none;
+}
+
 .logo{
     padding:8px;
     color: #006b66;
@@ -39,7 +45,7 @@ header{
 .nav-bar ul li a{
     display: block;
     color: #0f9690;
-    font-size: 20px;
+    font-size: 22px;
     padding: 10px 25px;
     border-radius: 50px;
     transition: 0.2s;
@@ -63,10 +69,31 @@ ul li ul.dropdown {
 }
 
 ul li:hover ul.dropdown {
-  background-color: #006863;
+  background-color: white;
   color: snow;
   display: block;
 }
+
+#popup {
+  position: fixed;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.30);
+  background-color:#002422;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+} 
 
 /* header styler ends */
 
@@ -131,7 +158,7 @@ ul li:hover ul.dropdown {
 .content {
   margin-top: 70px;
   margin-right: 5px;
-  margin-bottom: 200px;
+  margin-bottom: 240px;
 }
 
 .content-intro {
@@ -183,7 +210,8 @@ ul li:hover ul.dropdown {
     margin-bottom: 20px;
   }
   
-  .section h2 {
+  .section h2,
+  .photo-label {
     margin-bottom: 10px;
   }
   
@@ -191,7 +219,8 @@ ul li:hover ul.dropdown {
   input[type="email"],
   input[type="tel"],
   input[type="date"],
-  textarea {
+  textarea,
+  .form-control {
     width: 100%;
     padding: 10px;
     border: 2px solid #0f9690;
@@ -239,14 +268,14 @@ ul li:hover ul.dropdown {
   .about{
     text-align: center;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 3.6rem;
     font-family: Arial, Helvetica, sans-serif;
     /* margin: 10px 0; */
 }
 
 .about-us{
-  margin-top: 3%;
-  margin-bottom: 2%;
+  margin-top: 3.5%;
+  margin-bottom: 3%;
   display: flex;
   justify-content: space-between;
 }
@@ -260,12 +289,14 @@ ul li:hover ul.dropdown {
   box-sizing: border-box;
   transition: all 0.5s ease-in-out;
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   box-shadow: 0px 3px 3px #000;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .about-div:hover {
-  box-shadow: 0px 8px 30px;
+  box-shadow: 0px 5px 25px;
 }
 
 .about-heading-features{
@@ -282,7 +313,7 @@ ul li:hover ul.dropdown {
     font-weight: 600;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 26px;
+    margin-bottom: 38px;
  }
 
  .container1 {
@@ -322,6 +353,7 @@ label:hover {
   z-index: -1;
   transition: 0.3s linear;
   font-weight: 300px;
+  font-size: 19px;
   background-color: #f0fafa;
 }
 input:checked ~ .accordion-content {
@@ -339,12 +371,13 @@ input:checked ~ .accordion-content {
 
  footer {
   background-color: #002422;
+  height: 300px;
   /*position: relative;  required to position the copyright at the bottom */
 }
 
 .footercontainer {
   width: 100%;
-  padding: 70px 30px 20px;
+  padding: 180px 30px 20px;
   background-color: #002422;
 }
 
@@ -354,6 +387,7 @@ input:checked ~ .accordion-content {
   background: #002422;
   /* positions the copyright at the bottom of the footer */
   padding: 20px;
+  padding-bottom: 40px;
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -366,6 +400,7 @@ input:checked ~ .accordion-content {
   background-color: #002422;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .social-icon a {
@@ -406,3 +441,19 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-weight: 300px;
 padding: 10px;
 } 
+
+
+/* resume image css starts */
+
+ #set-image{
+  width: 150px;
+  height: 150px;
+  border-radius: 7px;
+  border: 1px solid #000;
+} 
+
+.form-control{
+      padding: 5px;
+}
+
+/* resume image css ends */
