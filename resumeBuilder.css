@@ -324,15 +324,20 @@ input[type="radio"] {
   display: none;
 }
 .container1 {
-  border: 1px solid #002422;
+  /* border: 1px solid #002422; */
   border-radius: 5px;
 }
 label {
   display: block;
   padding: 10px;
-  border-bottom: 1px solid #002422;
+  /* border-bottom: 1px solid #002422; */
   color: white;
   background: #006863;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  margin-left: 350px;
+  border-radius: 5px;
   z-index: 2; /* put it above the accordion content */
 }
 
@@ -345,7 +350,7 @@ label:hover {
   border: none;
 }
 .accordion-content {
-  border-bottom: 1px solid #002422;
+  /* border-bottom: 1px solid #002422; */
   padding: 0;
   opacity: 0;
   max-height: 0;
@@ -371,13 +376,13 @@ input:checked ~ .accordion-content {
 
  footer {
   background-color: #002422;
-  height: 300px;
+  height: 100px;
   /*position: relative;  required to position the copyright at the bottom */
 }
 
 .footercontainer {
   width: 100%;
-  padding: 180px 30px 20px;
+  padding: 100px 30px 20px;
   background-color: #002422;
 }
 
