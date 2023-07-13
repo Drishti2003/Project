@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="templatesresume.css">
+    <!-- <link rel="stylesheet" href="resumeBuilder.css"> -->
+    <title>Resume Form</title>
+
+
+</head>
+
+<body>
+    <h1> Resume Form </h1>
+    <nav class="nav-bar">
+        <div class="form-container">
+            <ul>
+                <li class="line"><a href="#" onclick="showFormSection('section1'); return false;">Personal
+                        Information</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section2'); return false;">Education</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section3'); return false;">Work Experience</a>
+                </li>
+                <li class="line"><a href="#" onclick="showFormSection('section4'); return false;">InternShips And
+                        Certificates</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section5'); return false;">Social Profile
+                        Links</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section6'); return false;">Projects</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section7'); return false;">Awards</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section8'); return false;">Strength And Weakness</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section9'); return false;">Hobbies</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section10'); return false;">Skills</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <div class="form-section active" id="section1">
+        <h2>Personal Information</h2>
+        <form class="personalInfoForm">
+            <!-- Form inputs for Section 1 -->
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required><br>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required><br>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Your Mobile NO."><br>
+            <input type="date" name="dob" id="dob" placeholder="Enter your Date Of Birth"><br>
+            <textarea name="address" placeholder="Enter Your Address" id="address" required></textarea><br>
+            <input type="text" name="married" id="married" placeholder="Married or Not"><br>
+            <input type="text" name="nationality" id="nationality" placeholder="Nationality"><br>
+            <input type="file" name="photo" id="photo" accept="image/*">
+            <img id="photoPreview" alt="Photo Preview">
+
+        </form>
+    </div>
+  
+    <div class="form-section" id="section2">
+        <h2>Education</h2>
+        <form class="educationForm">
+            <!-- Form inputs for Section 2 -->
+            <input type="text" name="tenthMarks" placeholder="Enter 10 th standard Marks In Percentage"><br>
+            <input type="text" name="twelMarks" placeholder="Enter 12 th standard Marks In Percentage"><br>
+            <input type="text" name="degreeName" placeholder="Degree Name"><br>
+            <input type="text" name="nameInstitution" placeholder="Institution Name"><br>
+            <span class="passing">Passing Date Of Degree:</span><input type="date" name="passingDate"><br>
+            <span class="passing">Marks Of Degree:</span><input type="date" name="aggregateMarks"><br>
+        </form>
+    </div>
+
+    <div class="form-section" id="section3">
+        <h2>Work Experience</h2>
+        <form class="experienceForm">
+            <!-- Form inputs for Section 3 -->
+            <input type="text" name="workTitle" placeholder="Job Title">
+            <input type="text" name="workCompany" placeholder="Company">
+            <span class="jobJoin">Starting Date:</span><input type="date" name="JoiningDate"><br>
+            <span class="jobJoin">Leaving Date:</span><input type="date" name="resignDate"><br>
+            <textarea name="workDescription" placeholder="Job Description"></textarea>
+        </form>
+    </div>
+
+
+    <div class="form-section" id="section4">
+        <h2>InternShips And Certificates</h2>
+        <form class="intershipForm">
+            <!-- Form inputs for Section 4 -->
+            <input type="text" name="internshipFieldName" placeholder="InternShip Field Name"><br>
+            <input type="text" name="orgName" placeholder="Company or Organization Name Where you done this Internship"><br>
+            <input type="text" name="inte-paid" placeholder="Free Or Paid??" >
+            <span class="internDate">Starting Date:</span><input type="date" name="passingDate"><br>
+            <span class="internDate">Finishing Date:</span><input type="date" name="aggregateMarks"><br>
+        </form>
+    </div>
+
+    <div class="form-section" id="section5">
+        <h2>Social Profile Links</h2>
+        <form class="profileForm">
+            <!-- Form inputs for Section 5 -->
+            <input type="text" name="linkedinUrl" placeholder="Enter Your linkedin Url">
+            <input type="text" name="instaUrl" placeholder="Enter Your Instagram Url">
+            <input type="text" name="facebookUrl" placeholder="Enter Your Facebook Url">
+            <input type="text" name="githubUrl" placeholder="Enter Your GitHub Repository Url">
+        </form>
+    </div>
+
+    <div class="form-section" id="section6">
+        <h2>Projects</h2>
+        <form class="projectForm">
+            <!-- Form inputs for Section 6 -->
+            <input type="text" name="projects[]" placeholder="Enter Your Project names">
+
+        </form>
+    </div>
+
+    <div class="form-section" id="section7">
+        <h2>Awards</h2>
+        <form class="awardForm">
+            <!-- Form inputs for Section 7 -->
+            <input type="text" name="awards[]" placeholder="Awards that you Won names">
+
+        </form>
+    </div>
+
+    <div class="form-section" id="section8">
+        <h2>Strength And Weakness</h2>
+        <form class="strengthweakForm">
+            <!-- Form inputs for Section 8 -->
+            <input type="text" name="strAndWeak[]" placeholder="Add your Strengths and Weaknesses">
+
+        </form>
+    </div>
+
+    <div class="form-section" id="section9">
+        <h2>Hobbies</h2>
+        <form class="hobbiesForm">
+            <!-- Form inputs for Section 9 -->
+            <input type="text" name="hobbies[]" placeholder="Add your Hobbies">
+
+        </form>
+    </div>
+
+    <div class="form-section" id="section10">
+        <h2>Skills</h2>
+        <form class="skillsForm">
+            <!-- Form inputs for Section 10 -->
+            <input type="text" name="skills[]" placeholder="What Skills Do You Have?">
+            <div class="form-buttons">
+                <button id="submitBtn" type="submit" value="submit">Submit</button>
+            </div>
+        </form>
+       
+    </div>
+    
+    <div id="templateOptions" style="display: none;">
+        <select id="templateSelect">
+          <option value="template1">Template 1</option>
+          <option value="template2">Template 2</option>
+          <option value="template3">Template 3</option>
+        </select>
+      </div>
+
+    <div id="preview" class="template3"></div>
+
+<!-- Add the download button here -->
+<div class="download-button">
+<button id="downloadBtn" style="display: none;">Download PDF</button>
+</div>
+
+
+
+    <script src="templatesresume.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</body>
+
+</html>
