@@ -91,25 +91,31 @@ submitBtn.addEventListener('click', function(e) {
   const internshipForm = document.querySelector('.intershipForm');
   const profileForm = document.querySelector('.profileForm');
   const projectForm = document.querySelector('.projectForm');
-  const awardForm = document.querySelector('.awardForm');
   const strengthweakForm = document.querySelector('.strengthweakForm');
   const hobbiesForm = document.querySelector('.hobbiesForm');
   const skillsForm = document.querySelector('.skillsForm');
 
   // Create the HTML for the preview
   const previewHTML = `
+    <div class="container">
     <h2>Resume</h2>
+    <div class="personal">
+    <p class="profile-pic"><img src="${photoPreview.src}" alt="Profile Photo"></p>
+    <div>
     <h3>Personal Information</h3>
-    <p><img src="${photoPreview.src}" alt="Profile Photo" style="width:16%; border: solid 1px black; border-radius:3px;"></p>
-    <p>Name: ${personalInfoForm.name.value}</p>
-    <p>Email: ${personalInfoForm.email.value}</p>
-    <p>Phone: ${personalInfoForm.phone.value}</p>
-    <p>Date of Birth: ${personalInfoForm.dob.value}</p>
-    <p>Address: ${personalInfoForm.address.value}</p>
-    <p>Married: ${personalInfoForm.married.value}</p>
-    <p>Nationality: ${personalInfoForm.nationality.value}</p>
+    <div class="contact">
+    <p><strong>Name:</strong> ${personalInfoForm.name.value}</p>
+    <p><strong>Email:</strong> ${personalInfoForm.email.value}</p>
+    <p><strong>Phone:</strong> ${personalInfoForm.phone.value}</p>
+    <p><strong>Address:</strong> ${personalInfoForm.address.value}</p>
+    <p><strong>Married:</strong> ${personalInfoForm.married.value}</p>
+    <p><strong>Nationality:</strong> ${personalInfoForm.nationality.value}</p>
+    </div>
+    </div>
+    </div>
     
 
+    <div class="education">
     <h3>Education</h3>
     <p>10th Standard Marks: ${educationForm.tenthMarks.value}</p>
     <p>12th Standard Marks: ${educationForm.twelMarks.value}</p>
@@ -117,41 +123,55 @@ submitBtn.addEventListener('click', function(e) {
     <p>Institution Name: ${educationForm.nameInstitution.value}</p>
     <p>Passing Date of Degree: ${educationForm.passingDate.value}</p>
     <p>Marks of Degree: ${educationForm.aggregateMarks.value}</p>
+    </div>
 
+    <div class="experience">
     <h3>Work Experience</h3>
     <p>Job Title: ${experienceForm.workTitle.value}</p>
     <p>Company: ${experienceForm.workCompany.value}</p>
     <p>Starting Date: ${experienceForm.JoiningDate.value}</p>
     <p>Leaving Date: ${experienceForm.resignDate.value}</p>
     <p>Job Description: ${experienceForm.workDescription.value}</p>
+    </div>
 
+    <div class="internship">
     <h3>Internships and Certificates</h3>
     <p>Internship Field Name: ${internshipForm.internshipFieldName.value}</p>
     <p>Company/Organization Name: ${internshipForm.orgName.value}</p>
     <p>Internship Type: ${internshipForm['inte-paid'].value}</p>
     <p>Starting Date: ${internshipForm.passingDate.value}</p>
     <p>Finishing Date: ${internshipForm.aggregateMarks.value}</p>
+    </div>
 
+    <div class="social">
     <h3>Social Profile Links</h3>
     <p>LinkedIn URL: ${profileForm.linkedinUrl.value}</p>
     <p>Instagram URL: ${profileForm.instaUrl.value}</p>
     <p>Facebook URL: ${profileForm.facebookUrl.value}</p>
     <p>GitHub Repository URL: ${profileForm.githubUrl.value}</p>
+    </div>
 
+    <div class="project">
     <h3>Projects</h3>
-    <p>Project Names: ${projectForm['projects[]'].value}</p>
+    <p>${projectForm['projects[]'].value}</p>
+    </div>
 
-    <h3>Awards</h3>
-    <p>Awards: ${awardForm['awards[]'].value}</p>
-
+    <div class="strength">
     <h3>Strengths and Weaknesses</h3>
-    <p>Strengths and Weaknesses: ${strengthweakForm['strAndWeak[]'].value}</p>
+    <p>Strengths: ${strengthweakForm['str[]'].value}</p>
+    <p>Weaknesses: ${strengthweakForm['Weak[]'].value}</p>
+    </div>
 
+    <div class="hobbies">
     <h3>Hobbies</h3>
-    <p>Hobbies: ${hobbiesForm['hobbies[]'].value}</p>
+    <p>${hobbiesForm['hobbies[]'].value}</p>
+    </div>
 
+    <div class="skills">
     <h3>Skills</h3>
-    <p>Skills: ${skillsForm['skills[]'].value}</p>
+    <p>${skillsForm['skills[]'].value}</p>
+    </div>
+    </div>
   `;
 
   // Update the preview element with the HTML
