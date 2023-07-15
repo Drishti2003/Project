@@ -24,10 +24,10 @@
                 <li class="line"><a href="#" onclick="showFormSection('section5'); return false;">Social Profile
                         Links</a></li>
                 <li class="line"><a href="#" onclick="showFormSection('section6'); return false;">Projects</a></li>
-                <li class="line"><a href="#" onclick="showFormSection('section7'); return false;">Awards</a></li>
-                <li class="line"><a href="#" onclick="showFormSection('section8'); return false;">Strength And Weakness</a></li>
-                <li class="line"><a href="#" onclick="showFormSection('section9'); return false;">Hobbies</a></li>
-                <li class="line"><a href="#" onclick="showFormSection('section10'); return false;">Skills</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section7'); return false;">Strength And Weakness</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section8'); return false;">Hobbies</a></li>
+                <li class="line"><a href="#" onclick="showFormSection('section9'); return false;">Skills</a></li>
+            
 
 
             </ul>
@@ -40,7 +40,6 @@
             <input type="text" name="name" id="name" placeholder="Enter Your Name" required><br>
             <input type="email" name="email" id="email" placeholder="Enter Your Email" required><br>
             <input type="tel" name="phone" id="phone" placeholder="Enter Your Mobile NO."><br>
-            <input type="date" name="dob" id="dob" placeholder="Enter your Date Of Birth"><br>
             <textarea name="address" placeholder="Enter Your Address" id="address" required></textarea><br>
             <input type="text" name="married" id="married" placeholder="Married or Not"><br>
             <input type="text" name="nationality" id="nationality" placeholder="Nationality"><br>
@@ -108,37 +107,30 @@
         </form>
     </div>
 
+
     <div class="form-section" id="section7">
-        <h2>Awards</h2>
-        <form class="awardForm">
+        <h2>Strength And Weakness</h2>
+        <form class="strengthweakForm">
             <!-- Form inputs for Section 7 -->
-            <input type="text" name="awards[]" placeholder="Awards that you Won names">
+            <input type="text" name="str[]" placeholder="Add your Strengths">
+            <input type="text" name="Weak[]" placeholder="Add your Weaknesses">
 
         </form>
     </div>
 
     <div class="form-section" id="section8">
-        <h2>Strength And Weakness</h2>
-        <form class="strengthweakForm">
-            <!-- Form inputs for Section 8 -->
-            <input type="text" name="strAndWeak[]" placeholder="Add your Strengths and Weaknesses">
-
-        </form>
-    </div>
-
-    <div class="form-section" id="section9">
         <h2>Hobbies</h2>
         <form class="hobbiesForm">
-            <!-- Form inputs for Section 9 -->
+            <!-- Form inputs for Section 8 -->
             <input type="text" name="hobbies[]" placeholder="Add your Hobbies">
 
         </form>
     </div>
 
-    <div class="form-section" id="section10">
+    <div class="form-section" id="section9">
         <h2>Skills</h2>
         <form class="skillsForm">
-            <!-- Form inputs for Section 10 -->
+            <!-- Form inputs for Section 9 -->
             <input type="text" name="skills[]" placeholder="What Skills Do You Have?">
             <div class="form-buttons">
                 <button id="submitBtn" type="submit" value="submit">Submit</button>
@@ -155,7 +147,7 @@
         </select>
       </div>
 
-    <div id="preview" class="template3"></div>
+    <div id="preview" class="template1"></div>
 
 <!-- Add the download button here -->
 <div class="download-button">
