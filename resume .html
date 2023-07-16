@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Generator</title>
+    <link rel="stylesheet" type="text/css" href="resume.css">
+</head>
+<body>
+    <h1> Resume </h1>
+    <form id="resumeForm">
+        <h2>Personal Information</h2>
+        <div class="form-row">
+      <input type="text" id="firstName"  name="firstName" placeholder="First Name" required>
+      <button type="button" onclick="startListening('firstName')">Speak</button>
+      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      <button type="button" onclick="startListening('lastName')">Speak</button>
+        </div>
+        <div class="form-row">
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <button type="button" onclick="startListening('email')">Speak</button>
+      <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+      <button type="button" onclick="startListening('phone')">Speak</button>
+        </div>
+
+        <!-- <h2>Summary</h2>
+        <textarea name="summary" id="summary" placeholder="Write your brief intro,strengths ,weaknesses,Projects,hobbies etc."></textarea> -->
+
+        <h2>Summary</h2>
+        <textarea id="summary" name="summary" placeholder="Enter a summary of your experiences" required></textarea>
+      <button type="button" onclick="startListening('summary')">Speak</button>
+
+
+        <h2>Skills</h2>
+        <textarea id="skills" name="skills" placeholder="Enter your skills separated by commas" required></textarea>
+      <button type="button" onclick="startListening('skills')">Speak</button>
+
+        <h2>Experiences</h2>
+        <input type="text" name="experience1" id="experience1" placeholder="Experience 1" required>
+      <button type="button" onclick="startListening('experience1')">Speak</button>
+
+        <input type="text" id="experience2" name="experience2" placeholder="Experience 2" required>
+      <button type="button" onclick="startListening('experience2')">Speak</button>
+
+        <input type="text" id="experience3" name="experience3"  placeholder="Experience 3">
+      <button type="button" onclick="startListening('experience3')">Speak</button>
+
+
+        <h2>Past Works</h2>
+        <input type="text" id="pastWork1" name="pastWork1" placeholder="Past Work 1" required>
+      <button type="button" onclick="startListening('pastWork1')">Speak</button>
+
+        <input type="text" id="pastWork2"  name="pastWork2" placeholder="Past Work 2" required>
+      <button type="button" onclick="startListening('pastWork2')">Speak</button>
+
+        <input type="text" id="pastWork3" name="pastWork3" placeholder="Past Work 3">
+      <button type="button" onclick="startListening('pastWork3')">Speak</button>
+
+
+        <h2>Work Description</h2>
+        <textarea id="workDescription" name="workDescription" placeholder="Enter your work description" required></textarea>
+        <button type="button" onclick="startListening('workDescription')">Speak</button>
+
+        <h2>Education</h2>
+        <input type="text" id="education1" name="education1" placeholder="Degree Name" required>
+      <button type="button" onclick="startListening('education1')">Speak</button>
+
+        <input type="text" id="education2" name="education2" placeholder="Institution Name" required>
+      <button type="button" onclick="startListening('education2')">Speak</button>
+
+        <input type="text" id="education3" name="education3" placeholder="Passing date">
+      <button type="button" onclick="startListening('education3')">Speak</button>
+
+
+        <h2>Profile Photo</h2>
+        <input type="file" id="profilePhoto" accept="image/*" required>
+
+
+       
+        <h2>Resume Template</h2>
+        <select id="resumeTemplate">
+            <option value="template1">Template 1</option>
+            <option value="template2">Template 2</option>
+            <option value="template3">Template 3</option>
+
+            <!-- Add more template options here -->
+        </select>
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+
+    <div id="resumePreview" style="display: none;">
+        <!-- Generated resume will be shown here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="resume.js"></script>
+</body>
+</html>
