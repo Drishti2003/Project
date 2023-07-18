@@ -66,9 +66,20 @@ templateSelect.addEventListener('change', function() {
   preview.classList.add(selectedTemplate);
 });
 
-// Rest of the code for generating the preview and downloading it...
 
 
+$(document).ready(function() {
+  $(".add-experience").click(function() {
+    var newExperience = $(".experience").first().clone();
+    newExperience.find("input, textarea").val(""); // Clear input values
+    newExperience.append('<button type="button" class="remove-experience">Remove</button>'); // Add remove button
+    $(".experienceForm").append(newExperience);
+  });
+
+  $(".experienceForm").on("click", ".remove-experience", function() {
+    $(this).closest(".experience").remove(); // Remove the respective experience section
+  });
+});
 
 
 // Get the submit button
