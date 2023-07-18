@@ -97,6 +97,10 @@ ul li:hover ul.dropdown {
 
 /* header styler ends */
 
+
+
+
+
 /* slider section start*/
 .slider-section {
   padding: 2rem;
@@ -153,16 +157,18 @@ ul li:hover ul.dropdown {
 /* slider section ends*/
 
 
+
+
 /* content section start*/
 
 .content {
-  margin-top: 70px;
+  margin-top: 0px;
   margin-right: 5px;
   margin-bottom: 240px;
 }
 
 .content-intro {
-  padding-bottom:60px;
+  padding-bottom:50px;
   color: #002422;
   font-size: 30px;
 }
@@ -170,7 +176,7 @@ ul li:hover ul.dropdown {
 .intro-content {
   font-weight: 400px;
   font-size: 75px;
-  margin-top: 160px;
+  margin-top: 120px;
   font-style: bold;
   margin-right: 6px;
 }
@@ -184,6 +190,7 @@ ul li:hover ul.dropdown {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
   margin-bottom: 5px;
   margin-top: 25px;
   margin-left: 800px;
