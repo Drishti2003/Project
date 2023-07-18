@@ -41,55 +41,74 @@ function generateResume() {
     }
 
     // Create a new PDF document
-    var opt = {
-        margin: 10,
-        filename: 'resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
+    // var opt = {
+    //     margin: 10,
+    //     filename: 'resume.pdf',
+    //     image: { type: 'jpeg', quality: 0.98 },
+    //     html2canvas: { scale: 2 },
+    //     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    // };
 
-    // Convert the resume HTML to PDF using html2pdf.js
-    html2pdf().set(opt).from(resumeHTML).save();
+    // // Convert the resume HTML to PDF using html2pdf.js
+    // html2pdf().set(opt).from(resumeHTML).save();
 
     // Display the generated resume
     var resumePreview = document.getElementById("resumePreview");
     resumePreview.innerHTML = resumeHTML;
+    downloadBtn.style.display = 'block';
     resumePreview.style.display = "block";
 }
+
+const downloadBtn = document.getElementById('downloadBtn');
+
+downloadBtn.style.display = 'none';
+
+downloadBtn.addEventListener('click', function() {
+    const previewElement = document.getElementById('resumePreview');
+    const fileName = 'Resume.pdf';
+  
+    // Generate the PDF from the preview element
+    html2pdf().from(previewElement).save(fileName);
+  });
 
 function generateTemplate1(firstName, lastName, email, phone, skills, experiences, pastWorks, workDescription, education, profilePhoto, summary) {
     var resumeHTML = `
         <div class="resume-template1">
-            <h2 id="names">${firstName} ${lastName}</h2><
+            <h2 id="names">${firstName} ${lastName}</h2>
+            <img src="${URL.createObjectURL(profilePhoto)}" alt="Profile Photo" width="200" height="200">
            <span> <p class="emails">Email: ${email}</p><p class="emails">Phone: ${phone}</p></span>
             <h2 class="color">Summary</h2>
             <p>${summary}</p>
-            <div class="outer-div">
-            <div class="inner-div">
+            <div class="education">
             <h2 class="color">Education</h2>
-            <ul class="lists">
+            <ul class="lists";>
                 ${education.map(edu => `<li>${edu}</li>`).join("")}
             </ul>
             </div>
-            <div class=" ">
+            <div class="experience">
             <h2 class="color">Experiences</h2>
             <ul class="lists">
                 ${experiences.map(experience => `<li>${experience}</li>`).join("")}
             </ul>
             </div>
+            <div class="pastwork">
             <h2 class="color">Past Works</h2>
             <ul class="lists">
                 ${pastWorks.map(pastWork => `<li>${pastWork}</li>`).join("")}
             </ul>
+            </div>
 
+            <div class="description">
             <h2 class="color">Work Description</h2>
-            <p>${workDescription}</p>
+            <pclass="description">${workDescription}</p>
+            </div>
 
+            <div class="skill">
             <h2 class="color">Skills</h2>
             <ul class="lists">
                 ${skills.map(skill => `<li>${skill}</li>`).join("")}
             </ul>
+            <div>
            
         </div>
     `;
