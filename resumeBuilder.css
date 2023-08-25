@@ -327,7 +327,7 @@ ul li:hover ul.dropdown {
   margin: 15px;
   margin-bottom: 30px;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 .container1 {
@@ -373,6 +373,10 @@ input:checked ~ .accordion-content {
   opacity: 1;
   max-height: 500px;
   z-index:1;
+}
+
+input:unchecked ~ .accordion-content {
+  display: none;
 }
 
 /* accordian css ends */
