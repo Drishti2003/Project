@@ -327,7 +327,7 @@ ul li:hover ul.dropdown {
   margin: 15px;
   margin-bottom: 30px;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 .container1 {
