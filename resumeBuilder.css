@@ -378,6 +378,7 @@ input:checked ~ .accordion-content {
 input:unchecked ~ .accordion-content {
   display: none;
 }
+
 /* accordian css ends */
 
 
