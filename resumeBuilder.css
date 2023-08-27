@@ -375,6 +375,9 @@ input:checked ~ .accordion-content {
   z-index:1;
 }
 
+input:unchecked ~ .accordion-content {
+  display: none;
+}
 /* accordian css ends */
 
 
